@@ -132,6 +132,13 @@ namespace ConsultorioDentalApp.Forms
             this.Controls.Add(dgvPacientes);
         }
 
+        private void dgvPacientes_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
+        {
+            int id = Convert.ToInt32(dgvPacientes.Rows[e.RowIndex].Cells["Id"].Value);
+            new FrmFichaClinica(id).ShowDialog();
+        }
+
+
         private Label CrearLabel(string texto, int x, int y)
         {
             return new Label()

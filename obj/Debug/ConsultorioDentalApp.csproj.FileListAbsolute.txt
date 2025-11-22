@@ -30,3 +30,35 @@ C:\Users\Admin\Desktop\Proyectos dentales\ConsultorioDentalApp\obj\Debug\Consult
 C:\Users\Admin\Desktop\Proyectos dentales\ConsultorioDentalApp\obj\Debug\ConsultorioDentalApp.pdb
 C:\Users\Admin\Desktop\Proyectos dentales\ConsultorioDentalApp\obj\Debug\ConsultorioDentalApp.csproj.SuggestedBindingRedirects.cache
 C:\Users\Admin\Desktop\Proyectos dentales\ConsultorioDentalApp\obj\Debug\ConsultorioDentalApp.exe.config
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\x86\sqlite3.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\x64\sqlite3.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\ConsultorioDentalApp.exe.config
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\ConsultorioDentalApp.exe
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\ConsultorioDentalApp.pdb
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\EntityFramework.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\SQLitePCLRaw.batteries_v2.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\SQLitePCLRaw.core.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\SQLitePCLRaw.provider.dynamic_cdecl.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Buffers.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Data.SQLite.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Data.SQLite.Linq.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Memory.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\EntityFramework.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Buffers.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Data.SQLite.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Memory.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.csproj.AssemblyReference.cache
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.csproj.SuggestedBindingRedirects.cache
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.exe.config
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.Properties.Resources.resources
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.csproj.GenerateResource.cache
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.csproj.CoreCompileInputs.cache
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\Consulto.ACEB2CF3.Up2Date
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.exe
+C:\Users\ferna\Source\Repos\Cosultorio-app\obj\Debug\ConsultorioDentalApp.pdb

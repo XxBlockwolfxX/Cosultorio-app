@@ -1,89 +1,89 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\",
+  "WorkspaceRootPath": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|c:\\users\\admin\\desktop\\proyectos dentales\\consultoriodentalapp\\forms\\odontogramacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\odontogramacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\models\\odontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\odontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\models\\procedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\procedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\services\\odontogramaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\odontogramaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|c:\\users\\ferna\\source\\repos\\cosultorio-app\\forms\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\services\\procedimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\procedimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:data\\databasehelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\odontogramacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\odontogramacontrol.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\odontogramaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\odontogramaservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\services\\tratamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\tratamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\models\\odontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\odontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\forms\\frmconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\paciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\models\\procedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\procedimiento.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\procedimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\procedimientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\pacienteservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:repositories\\genericrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\tratamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\tratamientoservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\repositories\\procedimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\repositories\\procedimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:repositories\\procedimientorepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\services\\azuresyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\azuresyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\azuresyncservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
@@ -94,32 +94,19 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 8,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
             },
             {
               "$type": "Bookmark",
-              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
+              "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
             },
             {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "OdontogramaControl.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\OdontogramaControl.cs",
-              "RelativeDocumentMoniker": "Forms\\OdontogramaControl.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\OdontogramaControl.cs",
-              "RelativeToolTip": "Forms\\OdontogramaControl.cs",
-              "ViewState": "AgIAABEAAAAAAAAAAAAQwBsAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-13T16:09:19.445Z",
-              "EditorCaption": ""
+              "$type": "Bookmark",
+              "Name": "ST:128:0:{116d2292-e37d-41cd-a077-ebacac4c8cc4}"
             },
             {
               "$type": "Bookmark",
@@ -127,47 +114,96 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 3,
               "Title": "FrmFichaClinica.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmFichaClinica.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.cs",
               "RelativeDocumentMoniker": "Forms\\FrmFichaClinica.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmFichaClinica.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.cs",
               "RelativeToolTip": "Forms\\FrmFichaClinica.cs",
-              "ViewState": "AgIAAFUAAAAAAAAAAAAmwGUAAAAmAAAAAAAAAA==",
+              "ViewState": "AgIAAGoAAAAAAAAAAAAswHgAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-13T15:41:38.556Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 6,
+              "Title": "Odontograma.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Odontograma.cs",
+              "RelativeDocumentMoniker": "Models\\Odontograma.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Odontograma.cs",
+              "RelativeToolTip": "Models\\Odontograma.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAtAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:30:05.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OdontogramaService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\OdontogramaService.cs",
+              "RelativeDocumentMoniker": "Services\\OdontogramaService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\OdontogramaService.cs",
+              "RelativeToolTip": "Services\\OdontogramaService.cs",
+              "ViewState": "AgIAAD0AAAAAAAAAAAAswE8AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:30:36.418Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
               "Title": "FrmDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmDashboard.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.cs",
               "RelativeDocumentMoniker": "Forms\\FrmDashboard.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmDashboard.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.cs",
               "RelativeToolTip": "Forms\\FrmDashboard.cs",
-              "ViewState": "AgIAABYAAAAAAAAAAAAqwCAAAABWAAAAAAAAAA==",
+              "ViewState": "AgIAABIAAAAAAAAAAIAwwCIAAABfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T16:55:46.214Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FrmTarjetaTerap\u00E9utica.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "RelativeToolTip": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "ViewState": "AgIAADAAAAAAAAAAAAAiwDsAAAAhAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FrmPacientes.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacientes.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmPacientes.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacientes.cs",
+              "RelativeToolTip": "Forms\\FrmPacientes.cs",
+              "ViewState": "AgIAAMoAAAAAAAAAAAAQwNYAAAAcAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T16:24:57.178Z"
+              "WhenOpened": "2025-11-12T15:30:53.943Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "DatabaseHelper.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Data\\DatabaseHelper.cs",
+              "RelativeDocumentMoniker": "Data\\DatabaseHelper.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Data\\DatabaseHelper.cs",
+              "RelativeToolTip": "Data\\DatabaseHelper.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAYAAAA1AAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:29:45.86Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "OdontogramaControl.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\OdontogramaControl.cs",
+              "RelativeDocumentMoniker": "Forms\\OdontogramaControl.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\OdontogramaControl.cs",
+              "RelativeToolTip": "Forms\\OdontogramaControl.cs",
+              "ViewState": "AgIAAAIDAAAAAAAAAAAswB4DAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-13T16:09:19.445Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 19,
               "Title": "ProcedimientoRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Repositories\\ProcedimientoRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Repositories\\ProcedimientoRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\ProcedimientoRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Repositories\\ProcedimientoRepository.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Repositories\\ProcedimientoRepository.cs",
               "RelativeToolTip": "Repositories\\ProcedimientoRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAADUAAAArAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -175,11 +211,35 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 7,
+              "Title": "FrmProcedimientos.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmProcedimientos.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmProcedimientos.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmProcedimientos.cs",
+              "RelativeToolTip": "Forms\\FrmProcedimientos.cs",
+              "ViewState": "AgIAAE0AAAAAAAAAAAAgwFcAAAAJAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T15:31:05.006Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "FrmTarjetaTerap\u00E9utica.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
+              "RelativeToolTip": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
+              "ViewState": "AgIAADAAAAAAAAAAAAAiwDsAAAAhAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-11-12T16:24:57.178Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
               "Title": "TratamientoService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\TratamientoService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\TratamientoService.cs",
               "RelativeDocumentMoniker": "Services\\TratamientoService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\TratamientoService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\TratamientoService.cs",
               "RelativeToolTip": "Services\\TratamientoService.cs",
               "ViewState": "AgIAAAwAAAAAAAAAAAA2wBQAAAATAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -187,11 +247,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 11,
               "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Program.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Program.cs",
               "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Program.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Program.cs",
               "RelativeToolTip": "Program.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAcAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -201,9 +261,9 @@
               "$type": "Document",
               "DocumentIndex": 18,
               "Title": "FrmConfiguracion.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmConfiguracion.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracion.cs",
               "RelativeDocumentMoniker": "Forms\\FrmConfiguracion.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmConfiguracion.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracion.cs",
               "RelativeToolTip": "Forms\\FrmConfiguracion.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -211,23 +271,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "FrmProcedimientos.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmProcedimientos.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmProcedimientos.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmProcedimientos.cs",
-              "RelativeToolTip": "Forms\\FrmProcedimientos.cs",
-              "ViewState": "AgIAAGgAAAAAAAAAAAAwwHYAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:31:05.006Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 8,
               "Title": "FrmOdontograma.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmOdontograma.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmOdontograma.cs",
               "RelativeDocumentMoniker": "Forms\\FrmOdontograma.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmOdontograma.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmOdontograma.cs",
               "RelativeToolTip": "Forms\\FrmOdontograma.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -235,23 +283,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FrmPacientes.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmPacientes.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPacientes.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Forms\\FrmPacientes.cs",
-              "RelativeToolTip": "Forms\\FrmPacientes.cs",
-              "ViewState": "AgIAACkAAAAAAAAAAAAjwNAAAABMAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:30:53.943Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 20,
               "Title": "AzureSyncService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\AzureSyncService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\AzureSyncService.cs",
               "RelativeDocumentMoniker": "Services\\AzureSyncService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\AzureSyncService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\AzureSyncService.cs",
               "RelativeToolTip": "Services\\AzureSyncService.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -259,23 +295,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "OdontogramaService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\OdontogramaService.cs",
-              "RelativeDocumentMoniker": "Services\\OdontogramaService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\OdontogramaService.cs",
-              "RelativeToolTip": "Services\\OdontogramaService.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:30:36.418Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ProcedimientoService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\ProcedimientoService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\ProcedimientoService.cs",
               "RelativeDocumentMoniker": "Services\\ProcedimientoService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\ProcedimientoService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\ProcedimientoService.cs",
               "RelativeToolTip": "Services\\ProcedimientoService.cs",
               "ViewState": "AgIAAAMAAAAAAAAAAAAAAAcAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -283,11 +307,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "PacienteService.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\PacienteService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\PacienteService.cs",
               "RelativeDocumentMoniker": "Services\\PacienteService.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Services\\PacienteService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\PacienteService.cs",
               "RelativeToolTip": "Services\\PacienteService.cs",
               "ViewState": "AgIAABgAAAAAAAAAAAAiwCIAAAAvAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -295,11 +319,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "GenericRepository.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Repositories\\GenericRepository.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Repositories\\GenericRepository.cs",
               "RelativeDocumentMoniker": "Repositories\\GenericRepository.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Repositories\\GenericRepository.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Repositories\\GenericRepository.cs",
               "RelativeToolTip": "Repositories\\GenericRepository.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -307,11 +331,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "Protesis.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Protesis.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Protesis.cs",
               "RelativeDocumentMoniker": "Models\\Protesis.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Protesis.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Protesis.cs",
               "RelativeToolTip": "Models\\Protesis.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -319,23 +343,11 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Odontograma.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Odontograma.cs",
-              "RelativeDocumentMoniker": "Models\\Odontograma.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Odontograma.cs",
-              "RelativeToolTip": "Models\\Odontograma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:30:05.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Procedimiento.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Procedimiento.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Procedimiento.cs",
               "RelativeDocumentMoniker": "Models\\Procedimiento.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Procedimiento.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Procedimiento.cs",
               "RelativeToolTip": "Models\\Procedimiento.cs",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAA0AAAAlAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
@@ -343,27 +355,15 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Paciente.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Paciente.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Paciente.cs",
               "RelativeDocumentMoniker": "Models\\Paciente.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Models\\Paciente.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Paciente.cs",
               "RelativeToolTip": "Models\\Paciente.cs",
               "ViewState": "AgIAAAkAAAAAAAAAAAAmwA0AAAAoAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-11-12T15:29:53.975Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "DatabaseHelper.cs",
-              "DocumentMoniker": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Data\\DatabaseHelper.cs",
-              "RelativeDocumentMoniker": "Data\\DatabaseHelper.cs",
-              "ToolTip": "C:\\Users\\Admin\\Desktop\\Proyectos dentales\\ConsultorioDentalApp\\Data\\DatabaseHelper.cs",
-              "RelativeToolTip": "Data\\DatabaseHelper.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAiwA0AAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-12T15:29:45.86Z"
             }
           ]
         }

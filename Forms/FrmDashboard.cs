@@ -30,7 +30,8 @@ namespace ConsultorioDentalApp.Forms
 
             // === Botones ===
             Button btnPacientes = CrearBoton("Pacientes", () => new FrmPacientes().ShowDialog());
-            Button btnFicha = CrearBoton("Ficha Clínica", () => new FrmFichaClinica().ShowDialog());
+            Button btnFicha = CrearBoton("Ficha Clínica", () => new FrmPacientes().ShowDialog());
+
             Button btnProced = CrearBoton("Procedimientos", () => new FrmProcedimientos().ShowDialog());
 
             menu.Controls.AddRange(new Control[] { btnPacientes, btnFicha, btnProced });

@@ -1,34 +1,52 @@
 ﻿using System;
 using System.Drawing;
-using System.Reflection;
 using System.Windows.Forms;
+using ConsultorioDentalApp.Services;  // ← IMPORTANTE
+using ConsultorioDentalApp;           // ← Modelo Odontograma
+using System.Collections.Generic;
 
 namespace ConsultorioDentalApp.Forms
 {
     public partial class FrmFichaClinica : Form
     {
-        public FrmFichaClinica()
+        private readonly int _pacienteId;
+        private readonly OdontogramaService _odontogramaService = new OdontogramaService();
+        private OdontogramaControl _odontogramaControl;
+
+        public FrmFichaClinica(int pacienteId)
         {
+            _pacienteId = pacienteId;
             InitializeComponent();
             BuildUI();
+            CargarDatosPaciente();
+            CargarOdontograma();
         }
 
-        private enum ToothState { Sano, Caries, Restaurado, Extraido }
-
-        private Image LoadEmbedded(string fileName)
+        private void CargarDatosPaciente()
         {
-            var asm = Assembly.GetExecutingAssembly();
-            var resourcePath = $"ConsultorioDentalApp.Resources.{fileName}";
-            using (var s = asm.GetManifestResourceStream(resourcePath))
-            {
-                return s != null ? Image.FromStream(s) : null;
-            }
+            // Aquí puedes conectar con tu tabla Paciente si deseas
+            // por ahora mostramos solo el ID seleccionado.
+            Text = $"Ficha Clínica del Paciente #{_pacienteId}";
+        }
+
+        private void CargarOdontograma()
+        {
+            List<Odontograma> datos = _odontogramaService.ObtenerPorPaciente(_pacienteId);
+            _odontogramaControl.AplicarEstado(datos);
+        }
+
+        private void GuardarOdontograma()
+        {
+            List<Odontograma> estado = _odontogramaControl.CapturarEstado(_pacienteId);
+            _odontogramaService.GuardarEstado(_pacienteId, estado);
+
+            MessageBox.Show("Odontograma guardado correctamente.",
+                "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void BuildUI()
         {
             // ================== CONFIG FORM ===================
-            Text = "Ficha Clínica";
             StartPosition = FormStartPosition.CenterScreen;
             BackColor = Color.White;
             Font = new Font("Segoe UI", 10f);
@@ -53,40 +71,13 @@ namespace ConsultorioDentalApp.Forms
 
             var lblPaciente = new Label
             {
-                Text = "Paciente",
-                Font = new Font("Segoe UI", 18f, FontStyle.Bold),
+                Text = $"Paciente ID: {_pacienteId}",
+                Font = new Font("Segoe UI", 20f, FontStyle.Bold),
                 ForeColor = Color.FromArgb(40, 70, 120),
-                Location = new Point(20, 25)
+                Location = new Point(20, 25),
+                AutoSize = true
             };
             pnlPaciente.Controls.Add(lblPaciente);
-
-            int y = 90;
-            void AddRow(string label, string val)
-            {
-                pnlPaciente.Controls.Add(new Label
-                {
-                    Text = label + ":",
-                    Font = new Font("Segoe UI Semibold", 10f),
-                    Location = new Point(20, y),
-                    AutoSize = true
-                });
-
-                pnlPaciente.Controls.Add(new Label
-                {
-                    Text = val,
-                    Font = new Font("Segoe UI", 10f),
-                    Location = new Point(110, y),
-                    AutoSize = true
-                });
-
-                y += 30;
-            }
-
-            AddRow("Nombre", "Juan Pérez");
-            AddRow("Edad", "30");
-            AddRow("Sexo", "M");
-            AddRow("Teléfono", "123456789");
-            AddRow("Correo", "demo@demo.net");
 
             // ================= PANEL DERECHO =================
             var pnlRight = new Panel
@@ -96,124 +87,45 @@ namespace ConsultorioDentalApp.Forms
             };
             main.Controls.Add(pnlRight);
 
-            // ============= WRAPPER PARA TABS =================
-            var contentWrapper = new Panel
-            {
-                Dock = DockStyle.Fill,
-                Padding = new Padding(300, 0, 0, 0),
-                BackColor = Color.White
-            };
-            pnlRight.Controls.Add(contentWrapper);
-
             // =============== TABCONTROL ======================
             var tabs = new TabControl
             {
-                Dock = DockStyle.Fill,
-                Font = new Font("Segoe UI", 10f, FontStyle.Bold),
-                Alignment = TabAlignment.Top,
-                DrawMode = TabDrawMode.OwnerDrawFixed,
-                ItemSize = new Size(260, 38),
-                SizeMode = TabSizeMode.Fixed,
-                Multiline = false
+                Dock = DockStyle.Fill
             };
+            pnlRight.Controls.Add(tabs);
 
-            tabs.DrawItem += (s, e) =>
-            {
-                var page = tabs.TabPages[e.Index];
-                bool selected = tabs.SelectedIndex == e.Index;
-
-                var bg = selected ? Color.White : Color.FromArgb(242, 243, 245);
-                var fg = selected ? Color.FromArgb(45, 90, 150) : Color.FromArgb(80, 80, 80);
-
-                using (var b = new SolidBrush(bg))
-                    e.Graphics.FillRectangle(b, e.Bounds);
-
-                TextRenderer.DrawText(
-                    e.Graphics,
-                    page.Text,
-                    tabs.Font,
-                    e.Bounds,
-                    fg,
-                    TextFormatFlags.HorizontalCenter | TextFormatFlags.VerticalCenter);
-            };
-
-            // ====== LOS TABS (ORDEN CORRECTO) ======
             var tpFicha = new TabPage("Ficha terapéutica") { BackColor = Color.White };
-            var tpHistoria = new TabPage("Historia ortodóntica del paciente") { BackColor = Color.White };
-            var tpTerapia = new TabPage("Terapia miofuncional") { BackColor = Color.White };
-
             tabs.TabPages.Add(tpFicha);
-            tabs.TabPages.Add(tpHistoria);
-            tabs.TabPages.Add(tpTerapia);
 
-            contentWrapper.Controls.Add(tabs);
-
-            // ================= HEADER FICHA =================
-            var headerFicha = new Panel
-            {
-                Dock = DockStyle.Top,
-                Height = 86,
-                BackColor = Color.White
-            };
-            tpFicha.Controls.Add(headerFicha);
-
-            headerFicha.Controls.Add(new Label
-            {
-                Text = "Fecha del último guardado (Obligatorio)",
-                Font = new Font("Segoe UI", 9f),
-                ForeColor = Color.FromArgb(95, 95, 95),
-                Location = new Point(24, 16)
-            });
-
-            headerFicha.Controls.Add(new DateTimePicker
-            {
-                Format = DateTimePickerFormat.Short,
-                Width = 180,
-                Location = new Point(24, 40)
-            });
-
-            // ================= PANEL CENTRAL =================
-            var bodyFicha = new Panel { Dock = DockStyle.Fill };
-            tpFicha.Controls.Add(bodyFicha);
-            bodyFicha.BringToFront();
-
-            // ================= ODONTOGRAMA ==================
+            // ================= PANEL ODONTOGRAMA =================
             var pnlOdonto = new Panel
             {
                 Dock = DockStyle.Top,
-                Height = 340,
+                Height = 360,
                 BackColor = Color.White
             };
-            bodyFicha.Controls.Add(pnlOdonto);
+            tpFicha.Controls.Add(pnlOdonto);
 
-
-            var odontograma = new OdontogramaControl
+            // AGREGAR TU ODONTOGRAMA
+            _odontogramaControl = new OdontogramaControl
             {
                 Dock = DockStyle.Fill
             };
+            pnlOdonto.Controls.Add(_odontogramaControl);
 
-            odontograma.CaraSeleccionada += (pieza, cara) =>
+            // ================= BOTÓN GUARDAR =================
+            var btnGuardar = new Button
             {
-                MessageBox.Show($"Diente {pieza}, cara {cara}");
+                Text = "Guardar Odontograma",
+                Width = 200,
+                Height = 40,
+                BackColor = Color.FromArgb(45, 90, 150),
+                ForeColor = Color.White,
+                FlatStyle = FlatStyle.Flat,
+                Location = new Point(20, 370)
             };
-
-            pnlOdonto.Controls.Add(odontograma);
-
-            // ================= SECTION BOTTOM ===============
-            var bottomFicha = new Panel
-            {
-                Dock = DockStyle.Fill,
-                BackColor = Color.FromArgb(249, 250, 251)
-            };
-            bodyFicha.Controls.Add(bottomFicha);
-
-            bottomFicha.Controls.Add(new Label
-            {
-                Text = "Detección de cáncer bucal y de tejidos blandos",
-                Font = new Font("Segoe UI", 11f, FontStyle.Bold),
-                ForeColor = Color.FromArgb(45, 90, 150),
-                Location = new Point(24, 16)
-            });
+            btnGuardar.Click += (s, e) => GuardarOdontograma();
+            tpFicha.Controls.Add(btnGuardar);
         }
     }
 }

@@ -5,7 +5,7 @@ namespace ConsultorioDentalApp.Data
     public static class DatabaseHelper
     {
         private static readonly string connectionString =
-            "Data Source=BLOCKWOLF;Initial Catalog=ConsultorioDentalDB;Integrated Security=True;";
+            "Server=BLOCKWOLF;Database=ConsultorioDentalDB;User Id=da;Password=123;TrustServerCertificate=True;";
 
         public static SqlConnection GetConnection()
         {

@@ -5,7 +5,7 @@ using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
 
-namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
+namespace ConsultorioDentalApp.Forms  
 {
     public partial class OdontogramaControl : UserControl
     {
@@ -27,7 +27,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
         {
             public Color FillColor = Color.White;
             public Color BorderColor = Color.Gray;
-            public string Overlay = "None";
+            public string Estado = "None";
         }
 
         // Evento opcional para que el formulario sepa qué pieza / cara se tocó
@@ -108,7 +108,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
                     if (btn.Tag is FaceState st)
                     {
                         st.FillColor = Color.White;
-                        st.Overlay = "None";
+                        st.Estado = "None";
                         btn.Invalidate();
                     }
                 }
@@ -270,8 +270,8 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
                                                  rectInterior.Right, rectInterior.Bottom);
                     }
 
-                    if (pieza.Tag is PiezaTag info && info.Estado.Overlay != "None")
-                        DibujarOverlay(e.Graphics, pieza, info.Estado.Overlay);
+                    if (pieza.Tag is PiezaTag info && info.Estado.Estado != "None")
+                        DibujarOverlay(e.Graphics, pieza, info.Estado.Estado);
                 };
 
                 Rectangle inner = new Rectangle(
@@ -386,7 +386,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
                 FlatStyle = FlatStyle.Flat,
                 BackColor = Color.Transparent,
                 Tag = new FaceState(),
-                Text = nombre,          // ← importante para guardar por cara
+                Text = "",      
                 Cursor = Cursors.Hand
             };
 
@@ -410,8 +410,8 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
                 using (SolidBrush b = new SolidBrush(st.FillColor == Color.White ? Color.Transparent : st.FillColor))
                     e.Graphics.FillPolygon(b, local);
 
-                if (st.Overlay != "None")
-                    DibujarOverlayCara(e.Graphics, btn.ClientRectangle, st.Overlay);
+                if (st.Estado != "None")
+                    DibujarOverlayCara(e.Graphics, btn.ClientRectangle, st.Estado);
             };
 
             btn.Click += (s, e) =>
@@ -435,7 +435,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             menu.Items.Add("Restaurado (Azul)", null, (s, e) =>
             {
                 st.FillColor = Color.SkyBlue;
-                st.Overlay = "None";
+                st.Estado = "None";
                 btn.Invalidate();
                 btn.Parent.Invalidate();
             });
@@ -443,7 +443,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             menu.Items.Add("Por Restaurar (Rojo)", null, (s, e) =>
             {
                 st.FillColor = Color.IndianRed;
-                st.Overlay = "None";
+                st.Estado = "None";
                 btn.Invalidate();
                 btn.Parent.Invalidate();
             });
@@ -454,7 +454,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "CoronaAzul";
+                    info.Estado.Estado = "CoronaAzul";
                     pieza.Invalidate();
                 }
             });
@@ -463,7 +463,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "CoronaRojo";
+                    info.Estado.Estado = "CoronaRojo";
                     pieza.Invalidate();
                 }
             });
@@ -474,7 +474,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "XBlue";
+                    info.Estado.Estado = "XBlue";
                     pieza.Invalidate();
                 }
             });
@@ -483,7 +483,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "XRed";
+                    info.Estado.Estado = "XRed";
                     pieza.Invalidate();
                 }
             });
@@ -492,7 +492,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "TriBlue";
+                    info.Estado.Estado = "TriBlue";
                     pieza.Invalidate();
                 }
             });
@@ -501,7 +501,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             {
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
                 {
-                    info.Estado.Overlay = "TriRed";
+                    info.Estado.Estado = "TriRed";
                     pieza.Invalidate();
                 }
             });
@@ -511,7 +511,7 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             menu.Items.Add("Recidiva de Caries", null, (s, e) =>
             {
                 st.FillColor = Color.Transparent;
-                st.Overlay = "RecidivaCaries";
+                st.Estado = "RecidivaCaries";
                 btn.Invalidate();
             });
 
@@ -520,10 +520,10 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
             menu.Items.Add("Limpiar", null, (s, e) =>
             {
                 st.FillColor = Color.White;
-                st.Overlay = "None";
+                st.Estado = "None";
 
                 if (btn.Parent is Panel pieza && pieza.Tag is PiezaTag info)
-                    info.Estado.Overlay = "None";
+                    info.Estado.Estado = "None";
 
                 btn.Invalidate();
                 btn.Parent.Invalidate();
@@ -539,43 +539,43 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
 
             menu.Items.Add("Con Corona (Azul)", null, (s, e) =>
             {
-                tag.Estado.Overlay = "CoronaAzul";
+                tag.Estado.Estado = "CoronaAzul";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Requiere Corona (Rojo)", null, (s, e) =>
             {
-                tag.Estado.Overlay = "CoronaRojo";
+                tag.Estado.Estado = "CoronaRojo";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Pieza Extraída (Azul)", null, (s, e) =>
             {
-                tag.Estado.Overlay = "XBlue";
+                tag.Estado.Estado = "XBlue";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Por Extraer (Rojo)", null, (s, e) =>
             {
-                tag.Estado.Overlay = "XRed";
+                tag.Estado.Estado = "XRed";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Endodoncia Realizada (Azul)", null, (s, e) =>
             {
-                tag.Estado.Overlay = "TriBlue";
+                tag.Estado.Estado = "TriBlue";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Endodoncia por Realizar (Rojo)", null, (s, e) =>
-            {
-                tag.Estado.Overlay = "TriRed";
+            {   
+                tag.Estado.Estado = "TriRed";
                 pieza.Invalidate();
             });
 
             menu.Items.Add("Limpiar", null, (s, e) =>
             {
-                tag.Estado.Overlay = "None";
+                tag.Estado.Estado = "None";
                 pieza.Invalidate();
             });
 
@@ -717,5 +717,91 @@ namespace ConsultorioDentalApp.Forms   // o .Controls si prefieres
                 g.DrawLine(pen, primera.Left, y, ultima.Right, y);
             }
         }
+
+        // =====================================================
+        //  GUARDAR EN BASE DE DATOS
+        // =====================================================
+        public List<Odontograma> CapturarEstado(int pacienteId)
+        {
+            var lista = new List<Odontograma>();
+
+            foreach (Control pieza in pnlOdontograma.Controls)
+            {
+                if (pieza is Panel pnl && pnl.Tag is PiezaTag info)
+                {
+                    foreach (Control caraCtrl in pnl.Controls)
+                    {
+                        if (caraCtrl is Button btn && btn.Tag is FaceState st)
+                        {
+                            // si está vacío → no guardar
+                            if (st.FillColor == Color.White && st.Estado == "None")
+                                continue;
+
+                            lista.Add(new Odontograma
+                            {
+                                PacienteId = pacienteId,
+                                Diente = info.NumeroDiente,
+                                Cara = btn.Text,
+                                Estado = st.Estado,
+                                Color = ColorTranslator.ToHtml(st.FillColor),
+                                FechaActualizacion = DateTime.Now
+                            });
+                        }
+                    }
+                }
+            }
+
+            return lista;
+        }
+
+        // =====================================================
+        //  APLICAR ESTADO DESDE BASE DE DATOS
+        // =====================================================
+        public void AplicarEstado(List<Odontograma> datos)
+{
+    // Reset visual
+    foreach (Control pieza in pnlOdontograma.Controls)
+    {
+        if (pieza is Panel pnl)
+        {
+            foreach (Control caraCtrl in pnl.Controls)
+            {
+                if (caraCtrl is Button btn && btn.Tag is FaceState st)
+                {
+                    st.FillColor = Color.White;
+                    st.Estado = "None";
+                    btn.Invalidate();
+                }
+            }
+        }
+    }
+
+    if (datos == null) return;
+
+    foreach (var item in datos)
+    {
+        var pieza = pnlOdontograma.Controls
+            .OfType<Panel>()
+            .FirstOrDefault(x => x.Tag is PiezaTag t && t.NumeroDiente == item.Diente);
+
+        if (pieza == null) continue;
+
+        var btn = pieza.Controls
+            .OfType<Button>()
+            .FirstOrDefault(x => x.Text == item.Cara);
+
+        if (btn?.Tag is FaceState st2)
+        {
+            st2.FillColor = ColorTranslator.FromHtml(item.Color);
+            st2.Estado = item.Estado;
+
+            btn.Invalidate();
+        }
+    }
+}
+
+
+
+
     }
 }
