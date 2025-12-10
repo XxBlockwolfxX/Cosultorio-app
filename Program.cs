@@ -1,6 +1,4 @@
-﻿using ConsultorioDentalApp.Forms;
-using ConsultorioDentalApp.Data;
-using System;
+﻿using System;
 using System.Windows.Forms;
 
 namespace ConsultorioDentalApp
@@ -13,7 +11,7 @@ namespace ConsultorioDentalApp
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
 
-            Application.Run(new FrmDashboard());
+            Application.Run(new Forms.FrmPrincipal());   
         }
     }
 }

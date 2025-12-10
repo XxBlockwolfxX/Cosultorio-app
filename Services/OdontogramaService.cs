@@ -1,7 +1,7 @@
 ﻿using ConsultorioDentalApp.Data;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace ConsultorioDentalApp.Services
 {
@@ -18,7 +18,7 @@ namespace ConsultorioDentalApp.Services
                                  FROM Odontograma
                                  WHERE PacienteId = @PacienteId";
 
-                using (var cmd = new SqlCommand(query, conn))
+                using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@PacienteId", pacienteId);
 
@@ -28,13 +28,13 @@ namespace ConsultorioDentalApp.Services
                         {
                             lista.Add(new Odontograma
                             {
-                                Id = rd.GetInt32(0),
-                                PacienteId = rd.GetInt32(1),
-                                Diente = rd.GetInt32(2),
-                                Cara = rd.GetString(3),
-                                Estado = rd.GetString(4),
-                                Color = rd.GetString(5),
-                                FechaActualizacion = rd.GetDateTime(6)
+                                Id = rd.GetInt32("Id"),
+                                PacienteId = rd.GetInt32("PacienteId"),
+                                Diente = rd.GetInt32("Diente"),
+                                Cara = rd.GetString("Cara"),
+                                Estado = rd.GetString("Estado"),
+                                Color = rd.GetString("Color"),
+                                FechaActualizacion = rd.GetDateTime("FechaActualizacion")
                             });
                         }
                     }
@@ -49,10 +49,11 @@ namespace ConsultorioDentalApp.Services
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
+
                 using (var tx = conn.BeginTransaction())
                 {
                     // borrar odontograma anterior
-                    using (var cmdDel = new SqlCommand(
+                    using (var cmdDel = new MySqlCommand(
                         "DELETE FROM Odontograma WHERE PacienteId = @PacienteId", conn, tx))
                     {
                         cmdDel.Parameters.AddWithValue("@PacienteId", pacienteId);
@@ -62,10 +63,10 @@ namespace ConsultorioDentalApp.Services
                     // insertar nuevo estado
                     foreach (var item in estado)
                     {
-                        using (var cmdIns = new SqlCommand(@"
+                        using (var cmdIns = new MySqlCommand(@"
                             INSERT INTO Odontograma 
                             (PacienteId, Diente, Cara, Estado, Color, FechaActualizacion)
-                            VALUES (@PacienteId, @Diente, @Cara, @Estado, @Color, GETDATE());",
+                            VALUES (@PacienteId, @Diente, @Cara, @Estado, @Color, NOW());",
                             conn, tx))
                         {
                             cmdIns.Parameters.AddWithValue("@PacienteId", pacienteId);

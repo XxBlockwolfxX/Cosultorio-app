@@ -1,11 +1,8 @@
 ﻿using ConsultorioDentalApp.Data;
 using ConsultorioDentalApp.Models;
-using ConsultorioDentalApp.Data;
-using ConsultorioDentalApp.Models;
 using System;
 using System.Collections.Generic;
-using System.Data.SqlClient;
-
+using MySql.Data.MySqlClient;
 
 namespace ConsultorioDentalApp.Repositories
 {
@@ -14,14 +11,16 @@ namespace ConsultorioDentalApp.Repositories
         public List<Procedimiento> ObtenerPorActividad(int pacienteId, string actividad)
         {
             var lista = new List<Procedimiento>();
+
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                var cmd = new SqlCommand(@"
+
+                var cmd = new MySqlCommand(@"
                     SELECT Id, Fecha, Dia, Actividad, Valor, Pago, Saldo
                     FROM Procedimiento
                     WHERE PacienteId = @PacienteId AND Actividad = @Actividad
-                    ORDER BY Id ASC", conn);
+                    ORDER BY Id ASC;", conn);
 
                 cmd.Parameters.AddWithValue("@PacienteId", pacienteId);
                 cmd.Parameters.AddWithValue("@Actividad", actividad);
@@ -32,17 +31,18 @@ namespace ConsultorioDentalApp.Repositories
                     {
                         lista.Add(new Procedimiento
                         {
-                            Id = Convert.ToInt32(reader["Id"]),
-                            Fecha = reader["Fecha"].ToString(),
-                            Dia = reader["Dia"].ToString(),
-                            Actividad = reader["Actividad"].ToString(),
-                            Valor = Convert.ToDecimal(reader["Valor"]),
-                            Pago = Convert.ToDecimal(reader["Pago"]),
-                            Saldo = Convert.ToDecimal(reader["Saldo"])
+                            Id = reader.GetInt32("Id"),
+                            Fecha = reader["Fecha"]?.ToString(),
+                            Dia = reader["Dia"]?.ToString(),
+                            Actividad = reader["Actividad"]?.ToString(),
+                            Valor = reader["Valor"] != DBNull.Value ? Convert.ToDecimal(reader["Valor"]) : 0,
+                            Pago = reader["Pago"] != DBNull.Value ? Convert.ToDecimal(reader["Pago"]) : 0,
+                            Saldo = reader["Saldo"] != DBNull.Value ? Convert.ToDecimal(reader["Saldo"]) : 0
                         });
                     }
                 }
             }
+
             return lista;
         }
 
@@ -51,10 +51,13 @@ namespace ConsultorioDentalApp.Repositories
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                var cmd = new SqlCommand(@"
-                    SELECT Saldo FROM Procedimiento
+
+                var cmd = new MySqlCommand(@"
+                    SELECT Saldo 
+                    FROM Procedimiento
                     WHERE PacienteId = @PacienteId AND Actividad = @Actividad
-                    ORDER BY Id DESC LIMIT 1", conn);
+                    ORDER BY Id DESC
+                    LIMIT 1;", conn);
 
                 cmd.Parameters.AddWithValue("@PacienteId", pacienteId);
                 cmd.Parameters.AddWithValue("@Actividad", actividad);

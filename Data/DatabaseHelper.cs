@@ -1,15 +1,15 @@
-﻿using System.Data.SqlClient;
+﻿using MySql.Data.MySqlClient;
 
 namespace ConsultorioDentalApp.Data
 {
     public static class DatabaseHelper
     {
         private static readonly string connectionString =
-            "Server=BLOCKWOLF;Database=ConsultorioDentalDB;User Id=da;Password=123;TrustServerCertificate=True;";
+            "Server=localhost;Database=ConsultorioDentalDB;Uid=root;Pwd=;";
 
-        public static SqlConnection GetConnection()
+        public static MySqlConnection GetConnection()
         {
-            return new SqlConnection(connectionString);
+            return new MySqlConnection(connectionString);
         }
     }
 }

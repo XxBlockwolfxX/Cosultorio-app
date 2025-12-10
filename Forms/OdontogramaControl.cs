@@ -4,11 +4,16 @@ using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Linq;
 using System.Windows.Forms;
+using ConsultorioDentalApp.Models;
+using ConsultorioDentalApp.Models; 
 
 namespace ConsultorioDentalApp.Forms  
 {
     public partial class OdontogramaControl : UserControl
     {
+        //Separacion entre dientes
+        private const int ESPACIO_ENTRE_DIENTES = 44; 
+
         // ==========================
         //  ESTADO INTERNO
         // ==========================
@@ -21,6 +26,7 @@ namespace ConsultorioDentalApp.Forms
         {
             public int NumeroDiente { get; set; }
             public FaceState Estado { get; set; } = new FaceState();
+
         }
 
         private class FaceState
@@ -119,6 +125,16 @@ namespace ConsultorioDentalApp.Forms
             pnlOdontograma.Refresh();
         }
 
+        // Para limpiar solo las prótesis
+        public void LimpiarProtesis()
+        {
+            protesisLista.Clear();
+
+            if (pnlOdontograma != null)
+                pnlOdontograma.Refresh();
+        }
+
+
         // =====================================================
         //  GENERACIÓN DEL ODONTOGRAMA
         // =====================================================
@@ -134,10 +150,10 @@ namespace ConsultorioDentalApp.Forms
             int centroX = anchoPanel / 2;
 
             // === CONFIG ===
-            int espacioEntreDientes = 58;
             int topInicial = 40;
-            int alturaFila = 80;
-            int espacioEntreArcos = 150;
+            int alturaFila = 70;            // menos distancia entre adulto y temporal
+            int espacioEntreArcos = 120;
+
 
             // ======================================
             // GRUPOS DE DIENTES (F.D.I)
@@ -158,20 +174,20 @@ namespace ConsultorioDentalApp.Forms
             // ======================================
             // CÁLCULO DE POSICIONES CENTRADAS
             // ======================================
-            int anchoArcoAdulto = supIzq.Length * espacioEntreDientes;
+            int anchoArcoAdulto = supIzq.Length * ESPACIO_ENTRE_DIENTES;
             int gap = 40;
 
             // Ajuste para mover la parte derecha
             int desplazamientoDerecha = 25; // Aumenta si quieres mover más
 
             int inicioIzquierda = centroX - (anchoArcoAdulto + gap);
-            int inicioDerecha = centroX + gap + desplazamientoDerecha;
+            int inicioDerecha = centroX + gap;
 
             // Evitar que se salga si la pantalla es pequeña
             if (inicioIzquierda < 10)
             {
                 inicioIzquierda = 10;
-                inicioDerecha = inicioIzquierda + anchoArcoAdulto + (gap * 2) + desplazamientoDerecha;
+                inicioDerecha = inicioIzquierda + anchoArcoAdulto + (gap * 2);
             }
 
             int offsetY = topInicial;
@@ -189,16 +205,18 @@ namespace ConsultorioDentalApp.Forms
             CrearFilaArco(supTempDer, inicioDerecha + 45, offsetY + alturaFila);
 
             // ======================================
-            // CREAR ARCADAS ADULTAS INFERIOR
+            // CREAR ARCADAS TEMPORALES INFERIOR
+            //  -> van MÁS CERCA de la línea central
             // ======================================
-            CrearFilaArco(infIzq, inicioIzquierda, offsetY + espacioEntreArcos + alturaFila);
-            CrearFilaArco(infDer, inicioDerecha, offsetY + espacioEntreArcos + alturaFila);
+            CrearFilaArco(infTempIzq, inicioIzquierda + 110, offsetY + espacioEntreArcos + alturaFila - 10);
+            CrearFilaArco(infTempDer, inicioDerecha + 45, offsetY + espacioEntreArcos + alturaFila - 10);
 
             // ======================================
-            // CREAR ARCADAS TEMPORALES INFERIOR
+            // CREAR ARCADAS ADULTAS INFERIOR
+            //  -> van MÁS ABAJO que las temporales
             // ======================================
-            CrearFilaArco(infTempIzq, inicioIzquierda + 110, offsetY + espacioEntreArcos + (alturaFila * 2));
-            CrearFilaArco(infTempDer, inicioDerecha + 45, offsetY + espacioEntreArcos + (alturaFila * 2));
+            CrearFilaArco(infIzq, inicioIzquierda, offsetY + espacioEntreArcos + (alturaFila * 2) - 10);
+            CrearFilaArco(infDer, inicioDerecha, offsetY + espacioEntreArcos + (alturaFila * 2) - 10);
 
             // ======================================
             // LINEAS DE CUADRANTES
@@ -209,8 +227,8 @@ namespace ConsultorioDentalApp.Forms
                 {
                     pen.DashStyle = System.Drawing.Drawing2D.DashStyle.Dash;
 
-                    int midX = pnlOdontograma.Width / 2;
-                    int midY = offsetY + espacioEntreArcos + 50;
+                    int midX = pnlOdontograma.Width / 2 - 45; 
+                    int midY = offsetY + espacioEntreArcos + (alturaFila / 2) - 10;
 
                     // Línea vertical central
                     e.Graphics.DrawLine(pen, midX, 0, midX, pnlOdontograma.Height);
@@ -232,14 +250,15 @@ namespace ConsultorioDentalApp.Forms
             {
                 Panel pieza = new Panel
                 {
-                    Width = 48,
-                    Height = 48,
+                    Width = 35,   
+                    Height = 35,  
                     Left = x,
                     Top = startY,
                     BackColor = Color.White,
                     BorderStyle = BorderStyle.FixedSingle,
                     Tag = new PiezaTag { NumeroDiente = numero }
                 };
+
 
                 pieza.Paint += (s, e) =>
                 {
@@ -311,7 +330,8 @@ namespace ConsultorioDentalApp.Forms
                 };
                 pnlOdontograma.Controls.Add(lblNum);
 
-                x += 58;
+                x += ESPACIO_ENTRE_DIENTES;
+
             }
         }
 
@@ -671,18 +691,26 @@ namespace ConsultorioDentalApp.Forms
 
             foreach (var p in protesisLista)
             {
-                Color colorBase = (p.Estado == "Por Realizar")
-                    ? Color.Red
-                    : Color.DodgerBlue;
+                // Normalizamos el texto del estado para evitar problemas de mayúsculas/espacios
+                string estado = (p.Estado ?? string.Empty).Trim();
+
+                bool esPorRealizar =
+                    estado.Equals("Por Realizar", StringComparison.OrdinalIgnoreCase) ||
+                    estado.Equals("Por realizar", StringComparison.OrdinalIgnoreCase);
+
+                Color colorBase = esPorRealizar
+                    ? Color.Red      // Por realizar  -> ROJO
+                    : Color.DodgerBlue; // Realizada (u otros) -> AZUL
 
                 if (p.Tipo == "Superior Total")
                     DibujarLineaProtesis(g, colorBase, 65);
                 else if (p.Tipo == "Inferior Total")
-                    DibujarLineaProtesis(g, colorBase, 295);
+                    DibujarLineaProtesis(g, colorBase, 320); // línea centrada en la nueva arcada inferior
                 else if (p.Tipo == "Removible Parcial" && p.Inicio > 0)
                     DibujarRemovible(g, p.Inicio, p.Fin, colorBase);
             }
         }
+
 
         private void DibujarLineaProtesis(Graphics g, Color color, int yCentro)
         {
@@ -729,6 +757,28 @@ namespace ConsultorioDentalApp.Forms
             {
                 if (pieza is Panel pnl && pnl.Tag is PiezaTag info)
                 {
+                    // 1) Estado de la pieza completa (Corona, X, Endodoncia)
+                    if (info.Estado != null && info.Estado.Estado != "None")
+                    {
+                        string colorHtml = "#000000";
+                        // No es obligatorio, pero si quieres:
+                        if (info.Estado.Estado.Contains("Blue") || info.Estado.Estado.Contains("Azul"))
+                            colorHtml = ColorTranslator.ToHtml(Color.Blue);
+                        else if (info.Estado.Estado.Contains("Red") || info.Estado.Estado.Contains("Rojo"))
+                            colorHtml = ColorTranslator.ToHtml(Color.Red);
+
+                        lista.Add(new Odontograma
+                        {
+                            PacienteId = pacienteId,
+                            Diente = info.NumeroDiente,
+                            Cara = "ALL",                   
+                            Estado = info.Estado.Estado,
+                            Color = colorHtml,
+                            FechaActualizacion = DateTime.Now
+                        });
+                    }
+
+                    // 2) Estados de cada cara
                     foreach (Control caraCtrl in pnl.Controls)
                     {
                         if (caraCtrl is Button btn && btn.Tag is FaceState st)
@@ -741,7 +791,7 @@ namespace ConsultorioDentalApp.Forms
                             {
                                 PacienteId = pacienteId,
                                 Diente = info.NumeroDiente,
-                                Cara = btn.Text,
+                                Cara = btn.Name,                      
                                 Estado = st.Estado,
                                 Color = ColorTranslator.ToHtml(st.FillColor),
                                 FechaActualizacion = DateTime.Now
@@ -754,54 +804,123 @@ namespace ConsultorioDentalApp.Forms
             return lista;
         }
 
+
         // =====================================================
         //  APLICAR ESTADO DESDE BASE DE DATOS
         // =====================================================
         public void AplicarEstado(List<Odontograma> datos)
-{
-    // Reset visual
-    foreach (Control pieza in pnlOdontograma.Controls)
-    {
-        if (pieza is Panel pnl)
         {
-            foreach (Control caraCtrl in pnl.Controls)
+            // 1) Reset visual completo
+            foreach (Control pieza in pnlOdontograma.Controls)
             {
-                if (caraCtrl is Button btn && btn.Tag is FaceState st)
+                if (pieza is Panel pnl && pnl.Tag is PiezaTag info)
                 {
-                    st.FillColor = Color.White;
-                    st.Estado = "None";
+                    // limpiar estado de la pieza
+                    info.Estado.Estado = "None";
+
+                    // limpiar caras
+                    foreach (Control caraCtrl in pnl.Controls)
+                    {
+                        if (caraCtrl is Button btn && btn.Tag is FaceState st)
+                        {
+                            st.FillColor = Color.White;
+                            st.Estado = "None";
+                            btn.Invalidate();
+                        }
+                    }
+
+                    pnl.Invalidate();
+                }
+            }
+
+            if (datos == null) return;
+
+            // 2) Primero aplicar estados de pieza completa (ALL)
+            foreach (var item in datos)
+            {
+                if (item.Cara != "ALL") continue;
+
+                var pieza = pnlOdontograma.Controls
+                    .OfType<Panel>()
+                    .FirstOrDefault(x => x.Tag is PiezaTag t && t.NumeroDiente == item.Diente);
+
+                if (pieza == null) continue;
+
+                if (pieza.Tag is PiezaTag infoPieza)
+                {
+                    infoPieza.Estado.Estado = item.Estado;
+                    pieza.Invalidate();
+                }
+            }
+
+            // 3) Ahora aplicar estados de caras individuales
+            foreach (var item in datos)
+            {
+                if (item.Cara == "ALL") continue;   
+
+                var pieza = pnlOdontograma.Controls
+                    .OfType<Panel>()
+                    .FirstOrDefault(x => x.Tag is PiezaTag t && t.NumeroDiente == item.Diente);
+
+                if (pieza == null) continue;
+
+                var btn = pieza.Controls
+                    .OfType<Button>()
+                    .FirstOrDefault(x => x.Name == item.Cara);    
+                if (btn == null) continue;
+                if (btn?.Tag is FaceState st2)
+                {
+                    st2.FillColor = ColorTranslator.FromHtml(item.Color);
+                    st2.Estado = item.Estado;
                     btn.Invalidate();
                 }
             }
         }
-    }
+// =====================================================
+//  PROTESIS: EXPORTAR / IMPORTAR PARA BD
+// =====================================================
 
-    if (datos == null) return;
-
-    foreach (var item in datos)
+// Convierte lo que hay en protesisLista a una lista de entidades Protesis
+    public List<Protesis> CapturarProtesis(int pacienteId)
     {
-        var pieza = pnlOdontograma.Controls
-            .OfType<Panel>()
-            .FirstOrDefault(x => x.Tag is PiezaTag t && t.NumeroDiente == item.Diente);
+        var lista = new List<Protesis>();
 
-        if (pieza == null) continue;
-
-        var btn = pieza.Controls
-            .OfType<Button>()
-            .FirstOrDefault(x => x.Text == item.Cara);
-
-        if (btn?.Tag is FaceState st2)
+        foreach (var p in protesisLista)
         {
-            st2.FillColor = ColorTranslator.FromHtml(item.Color);
-            st2.Estado = item.Estado;
-
-            btn.Invalidate();
+            lista.Add(new Protesis
+            {
+                // Id lo maneja la BD (AUTO_INCREMENT)
+                PacienteId = pacienteId,
+                Tipo = p.Tipo,
+                Inicio = p.Inicio,
+                Fin = p.Fin,
+                Estado = p.Estado
+            });
         }
+
+        return lista;
     }
+
+    // Rellena protesisLista a partir de lo leído de la BD
+    public void AplicarProtesisDesdeDb(List<Protesis> datos)
+    {
+        protesisLista.Clear();
+
+        if (datos != null)
+        {
+            foreach (var p in datos)
+            {
+                protesisLista.Add((p.Tipo, p.Inicio, p.Fin, p.Estado));
+            }
+        }
+
+        // Forzar repintado de las líneas de prótesis
+        if (pnlOdontograma != null)
+            pnlOdontograma.Refresh();
+    }
+
+
+
+
 }
-
-
-
-
-    }
 }

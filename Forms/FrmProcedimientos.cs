@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using System.Drawing;
 using System.Windows.Forms;
 using ConsultorioDentalApp.Data;
@@ -56,10 +56,7 @@ namespace ConsultorioDentalApp.Forms
                 Top = 75,
                 Width = 300
             };
-            txtBuscar.TextChanged += (s, e) =>
-            {
-                FiltrarPacientes(txtBuscar.Text);
-            };
+            txtBuscar.TextChanged += (s, e) => FiltrarPacientes(txtBuscar.Text);
             Controls.Add(txtBuscar);
 
             // ======== TABLA ========
@@ -84,17 +81,27 @@ namespace ConsultorioDentalApp.Forms
             Controls.Add(dgvPacientes);
         }
 
+        // ===========================================================
+        //             CARGAR PACIENTES (MYSQL)
+        // ===========================================================
         private void CargarPacientes()
         {
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT Id, Nombre, Edad, Sexo, Diagnostico FROM Pacientes";
-                var da = new SqlDataAdapter("SELECT * FROM Paciente", conn);
+
+                var da = new MySqlDataAdapter(
+                    "SELECT Id, Nombre, Edad, Sexo FROM Paciente ORDER BY Nombre ASC",
+                    conn
+                );
+
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
-                // Botón "Ver tarjeta terapéutica"
+                dgvPacientes.Columns.Clear();
+                dgvPacientes.DataSource = dt;
+
+                // Botón
                 DataGridViewButtonColumn btnCol = new DataGridViewButtonColumn
                 {
                     Text = "🦷 Ver Tarjeta Terapéutica",
@@ -104,23 +111,30 @@ namespace ConsultorioDentalApp.Forms
                     FlatStyle = FlatStyle.Flat
                 };
 
-                dgvPacientes.DataSource = dt;
-                if (!dgvPacientes.Columns.Contains("btnVer"))
-                    dgvPacientes.Columns.Add(btnCol);
+                dgvPacientes.Columns.Add(btnCol);
             }
         }
 
+        // ===========================================================
+        //                 FILTRAR PACIENTES (MYSQL)
+        // ===========================================================
         private void FiltrarPacientes(string texto)
         {
             using (var conn = DatabaseHelper.GetConnection())
             {
                 conn.Open();
-                string query = "SELECT Id, Nombre, Edad, Sexo, Diagnostico FROM Pacientes WHERE Nombre LIKE @texto";
-                var da = new SqlDataAdapter("SELECT * FROM Paciente", conn);
+
+                var da = new MySqlDataAdapter(
+                    "SELECT Id, Nombre, Edad, Sexo FROM Paciente WHERE Nombre LIKE @texto",
+                    conn
+                );
+
                 da.SelectCommand.Parameters.AddWithValue("@texto", "%" + texto + "%");
+
                 DataTable dt = new DataTable();
                 da.Fill(dt);
 
+                dgvPacientes.Columns.Clear();
                 dgvPacientes.DataSource = dt;
 
                 if (!dgvPacientes.Columns.Contains("btnVer"))
@@ -133,11 +147,15 @@ namespace ConsultorioDentalApp.Forms
                         Name = "btnVer",
                         FlatStyle = FlatStyle.Flat
                     };
+
                     dgvPacientes.Columns.Add(btnCol);
                 }
             }
         }
 
+        // ===========================================================
+        //                EVENTO CLICK BOTÓN
+        // ===========================================================
         private void DgvPacientes_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             if (e.RowIndex >= 0 && dgvPacientes.Columns[e.ColumnIndex].Name == "btnVer")

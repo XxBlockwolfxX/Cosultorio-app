@@ -1,5 +1,5 @@
 ﻿using System.Data;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 using ConsultorioDentalApp.Data;
 
 namespace ConsultorioDentalApp.Services
@@ -7,8 +7,7 @@ namespace ConsultorioDentalApp.Services
     public class TratamientoService
     {
         /// <summary>
-        /// Devuelve el historial (Fecha, Actividad, Estado, Observaciones, Doctor, FechaFin)
-        /// del diente seleccionado para el paciente indicado.
+        /// Devuelve historial del diente seleccionado para un paciente.
         /// </summary>
         public static DataTable ObtenerPorDiente(int pacienteId, string diente)
         {
@@ -16,24 +15,29 @@ namespace ConsultorioDentalApp.Services
             {
                 conn.Open();
 
-                using (var cmd = new SqlCommand(@"
-SELECT
-    Fecha AS Fecha,
-    Actividad,
-    Estado,
-    ISNULL(Observacion, '') AS Observaciones,
-    ISNULL(Doctor, '') AS Doctor,
-    ISNULL(FechaFin, '') AS FechaFin
-FROM Procedimiento
-WHERE PacienteId = @PacienteId AND Actividad LIKE '%' + @Diente + '%'
-ORDER BY Fecha DESC;", conn))
+                string query = @"
+                    SELECT 
+                        Fecha AS Fecha,
+                        Actividad,
+                        Estado,
+                        IFNULL(Observacion, '') AS Observaciones,
+                        IFNULL(Doctor, '') AS Doctor,
+                        IFNULL(FechaFin, '') AS FechaFin
+                    FROM Procedimiento
+                    WHERE PacienteId = @PacienteId
+                      AND Actividad LIKE CONCAT('%', @Diente, '%')
+                    ORDER BY Fecha DESC;
+                ";
+
+                using (var cmd = new MySqlCommand(query, conn))
                 {
                     cmd.Parameters.AddWithValue("@PacienteId", pacienteId);
                     cmd.Parameters.AddWithValue("@Diente", diente);
 
-                    var da = new SqlDataAdapter(cmd);
-                    var dt = new DataTable();
+                    MySqlDataAdapter da = new MySqlDataAdapter(cmd);
+                    DataTable dt = new DataTable();
                     da.Fill(dt);
+
                     return dt;
                 }
             }

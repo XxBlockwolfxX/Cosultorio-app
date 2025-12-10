@@ -1,7 +1,8 @@
-﻿using System.Data;
-using System.Data.SqlClient;
+﻿using System;
+using System.Data;
 using ConsultorioDentalApp.Data;
 using ConsultorioDentalApp.Models;
+using MySql.Data.MySqlClient;
 
 namespace ConsultorioDentalApp.Services
 {
@@ -13,18 +14,23 @@ namespace ConsultorioDentalApp.Services
             {
                 conn.Open();
 
-                using (var cmd = new SqlCommand(@"
-SELECT 
-    Id, 
-    Nombre, 
-    Edad, 
-    Sexo, 
-    EstadoCivil,
-    Telefono, 
-    Correo, 
-    Direccion
-FROM Paciente
-WHERE Id = @Id;", conn))
+                string sql = @"
+                    SELECT 
+                        Id, 
+                        Nombre, 
+                        Edad, 
+                        Sexo, 
+                        FechaNacimiento,
+                        EstadoCivil,
+                        Direccion,
+                        TelefonoMovil AS Telefono,
+                        Whatsapp,
+                        Correo
+                    FROM Paciente
+                    WHERE Id = @Id;
+                ";
+
+                using (var cmd = new MySqlCommand(sql, conn))
                 {
                     cmd.Parameters.AddWithValue("@Id", pacienteId);
 
@@ -34,14 +40,18 @@ WHERE Id = @Id;", conn))
                         {
                             return new Paciente
                             {
-                                Id = rd.GetInt32(0),
-                                Nombre = rd.IsDBNull(1) ? null : rd.GetString(1),
-                                Edad = rd.IsDBNull(2) ? (int?)null : rd.GetInt32(2),
-                                Sexo = rd.IsDBNull(3) ? null : rd.GetString(3),
-                                EstadoCivil = rd.IsDBNull(4) ? null : rd.GetString(4),
-                                Telefono = rd.IsDBNull(5) ? null : rd.GetString(5),
-                                Correo = rd.IsDBNull(6) ? null : rd.GetString(6),
-                                Direccion = rd.IsDBNull(7) ? null : rd.GetString(7)
+                                Id = rd.GetInt32("Id"),
+                                Nombre = rd.IsDBNull(rd.GetOrdinal("Nombre")) ? null : rd.GetString("Nombre"),
+                                Edad = rd.IsDBNull(rd.GetOrdinal("Edad")) ? (int?)null : rd.GetInt32("Edad"),
+                                Sexo = rd.IsDBNull(rd.GetOrdinal("Sexo")) ? null : rd.GetString("Sexo"),
+                                FechaNacimiento = rd.IsDBNull(rd.GetOrdinal("FechaNacimiento"))
+                                    ? (DateTime?)null
+                                    : rd.GetDateTime("FechaNacimiento"),
+                                EstadoCivil = rd.IsDBNull(rd.GetOrdinal("EstadoCivil")) ? null : rd.GetString("EstadoCivil"),
+                                Direccion = rd.IsDBNull(rd.GetOrdinal("Direccion")) ? null : rd.GetString("Direccion"),
+                                Telefono = rd.IsDBNull(rd.GetOrdinal("Telefono")) ? null : rd.GetString("Telefono"),
+                                Whatsapp = rd.IsDBNull(rd.GetOrdinal("Whatsapp")) ? null : rd.GetString("Whatsapp"),
+                                Correo = rd.IsDBNull(rd.GetOrdinal("Correo")) ? null : rd.GetString("Correo")
                             };
                         }
                     }
