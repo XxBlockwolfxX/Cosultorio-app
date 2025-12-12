@@ -380,37 +380,23 @@ namespace ConsultorioDentalApp.Forms
             btnBackPacientes.Visible = false;
 
             pnlContenido.Controls.Clear();
+
+            // Márgenes alrededor del contenido
+            pnlContenido.Padding = new Padding(40, 80, 40, 40);
             pnlContenido.Invalidate();
 
-            // Título
-            var lblTitulo = new Label
-            {
-                Text = "Consultas de pacientes",
-                ForeColor = Color.White,
-                Font = new Font("Segoe UI", 16f, FontStyle.Bold),
-                AutoSize = true,
-                Left = 40,
-                Top = 20,
-                BackColor = Color.Transparent
-            };
-            pnlContenido.Controls.Add(lblTitulo);
-
-            // Grid
+            // ===== GRID =====
             var dgv = new DataGridView
             {
                 Name = "dgvConsultasPacientes",
-                Left = 40,
-                Top = 60, // un poco de espacio bajo el título
-                Width = pnlContenido.ClientSize.Width - 80,
-                Height = pnlContenido.ClientSize.Height - 100,
-                Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right,
+                Dock = DockStyle.Fill,                  
                 ReadOnly = true,
                 AllowUserToAddRows = false,
                 BackgroundColor = Color.FromArgb(60, 60, 65),
                 BorderStyle = BorderStyle.None,
                 SelectionMode = DataGridViewSelectionMode.FullRowSelect,
                 MultiSelect = false,
-                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.None, // vamos a fijar anchos
+                AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill,
                 EnableHeadersVisualStyles = false,
                 RowHeadersVisible = false
             };
@@ -426,9 +412,25 @@ namespace ConsultorioDentalApp.Forms
             dgv.DefaultCellStyle.SelectionForeColor = Color.White;
             dgv.AlternatingRowsDefaultCellStyle.BackColor = Color.FromArgb(80, 80, 85);
 
-            pnlContenido.Controls.Add(dgv);
+            // ===== TÍTULO =====
+            var lblTitulo = new Label
+            {
+                Text = "Consultas de pacientes",
+                ForeColor = Color.White,
+                Font = new Font("Segoe UI", 16f, FontStyle.Bold),
+                Dock = DockStyle.Top,
+                Height = 40,
+                TextAlign = ContentAlignment.MiddleLeft,
+                BackColor = Color.Transparent,
+                Margin = new Padding(0, 0, 0, 10)  
+            };
 
-            // Cargar datos desde MySQL
+
+            // IMPORTANTE: primero se agrega el grid (Fill) y luego el título (Top)
+            pnlContenido.Controls.Add(dgv);
+            pnlContenido.Controls.Add(lblTitulo);
+
+            // ===== CARGAR DATOS =====
             try
             {
                 using (var conn = DatabaseHelper.GetConnection())
@@ -449,49 +451,13 @@ namespace ConsultorioDentalApp.Forms
 
                     using (var da = new MySqlDataAdapter(sql, conn))
                     {
-                        var dt = new System.Data.DataTable();
+                        var dt = new DataTable();
                         da.Fill(dt);
                         dgv.DataSource = dt;
-
-                        // Ocultar columnas internas
-                        if (dgv.Columns["Id"] != null)
-                            dgv.Columns["Id"].Visible = false;
-                        if (dgv.Columns["PacienteId"] != null)
-                            dgv.Columns["PacienteId"].Visible = false;
-
-                        // Encabezados amigables
-                        if (dgv.Columns["Paciente"] != null)
-                            dgv.Columns["Paciente"].HeaderText = "Paciente";
-                        if (dgv.Columns["Motivo"] != null)
-                            dgv.Columns["Motivo"].HeaderText = "Motivo de consulta";
-                        if (dgv.Columns["Diagnostico"] != null)
-                            dgv.Columns["Diagnostico"].HeaderText = "Diagnóstico";
-
-                        // ===== Ajuste de anchos =====
-                        if (dgv.Columns["Paciente"] != null)
-                            dgv.Columns["Paciente"].Width = 250;
-
-                        if (dgv.Columns["Fecha"] != null)
-                        {
-                            dgv.Columns["Fecha"].Width = 90;
-                            dgv.Columns["Fecha"].DefaultCellStyle.Alignment =
-                                DataGridViewContentAlignment.MiddleCenter;
-                        }
-
-                        if (dgv.Columns["Hora"] != null)
-                        {
-                            dgv.Columns["Hora"].Width = 70;
-                            dgv.Columns["Hora"].DefaultCellStyle.Alignment =
-                                DataGridViewContentAlignment.MiddleCenter;
-                        }
-
-                        if (dgv.Columns["Motivo"] != null)
-                            dgv.Columns["Motivo"].Width = 260;
-
-                        if (dgv.Columns["Diagnostico"] != null)
-                            dgv.Columns["Diagnostico"].Width = 260;
                     }
                 }
+
+                AjustarColumnasConsultas(dgv);
             }
             catch (Exception ex)
             {
@@ -499,7 +465,7 @@ namespace ConsultorioDentalApp.Forms
                     "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
 
-            // Doble click => abrir historial de ese paciente
+            // Doble clic => historial del paciente
             dgv.CellDoubleClick += (s, e) =>
             {
                 if (e.RowIndex < 0) return;
@@ -509,8 +475,8 @@ namespace ConsultorioDentalApp.Forms
                 var valNombre = row.Cells["Paciente"].Value;
 
                 if (valIdPac == null || valNombre == null) return;
-
                 if (!int.TryParse(valIdPac.ToString(), out var pacienteId)) return;
+
                 string nombrePaciente = valNombre.ToString();
 
                 using (var frm = new FrmConsultasPaciente(pacienteId, nombrePaciente))
@@ -519,6 +485,50 @@ namespace ConsultorioDentalApp.Forms
                     frm.ShowDialog(this);
                 }
             };
+        }
+
+
+
+
+        private void AjustarColumnasConsultas(DataGridView dgv)
+        {
+            if (dgv.Columns.Count == 0) return;
+
+            dgv.RowHeadersVisible = false;
+            dgv.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
+
+            if (dgv.Columns["Id"] != null)
+                dgv.Columns["Id"].Visible = false;
+            if (dgv.Columns["PacienteId"] != null)
+                dgv.Columns["PacienteId"].Visible = false;
+
+            if (dgv.Columns["Paciente"] != null)
+                dgv.Columns["Paciente"].HeaderText = "Paciente";
+            if (dgv.Columns["Fecha"] != null)
+                dgv.Columns["Fecha"].HeaderText = "Fecha";
+            if (dgv.Columns["Hora"] != null)
+                dgv.Columns["Hora"].HeaderText = "Hora";
+            if (dgv.Columns["Motivo"] != null)
+                dgv.Columns["Motivo"].HeaderText = "Motivo de consulta";
+            if (dgv.Columns["Diagnostico"] != null)
+                dgv.Columns["Diagnostico"].HeaderText = "Diagnóstico";
+
+            // Proporciones de ancho
+            if (dgv.Columns["Paciente"] != null)
+                dgv.Columns["Paciente"].FillWeight = 25;
+            if (dgv.Columns["Fecha"] != null)
+                dgv.Columns["Fecha"].FillWeight = 10;
+            if (dgv.Columns["Hora"] != null)
+                dgv.Columns["Hora"].FillWeight = 8;
+            if (dgv.Columns["Motivo"] != null)
+                dgv.Columns["Motivo"].FillWeight = 28;
+            if (dgv.Columns["Diagnostico"] != null)
+                dgv.Columns["Diagnostico"].FillWeight = 29;
+
+            if (dgv.Columns["Fecha"] != null)
+                dgv.Columns["Fecha"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
+            if (dgv.Columns["Hora"] != null)
+                dgv.Columns["Hora"].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
         }
 
 
