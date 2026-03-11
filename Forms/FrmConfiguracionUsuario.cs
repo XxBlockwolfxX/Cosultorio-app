@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Drawing;
 using System.Windows.Forms;
+using ConsultorioDentalApp.Services;
 
 namespace ConsultorioDentalApp.Forms
 {
@@ -14,6 +15,12 @@ namespace ConsultorioDentalApp.Forms
         private Label lblTitulo;
         private Label lblNombre;
         private Panel panelFoto;
+
+        // ===== Horario =====
+        private CheckedListBox clbDias;
+        private DateTimePicker dtpIni, dtpFin;
+        private NumericUpDown nudIntervalo;
+        private AgendaConfig agendaCfg;
 
         public Image FotoSeleccionada { get; private set; }
         public string NombreUsuario { get; private set; }
@@ -37,7 +44,9 @@ namespace ConsultorioDentalApp.Forms
             StartPosition = FormStartPosition.CenterParent;
             MaximizeBox = false;
             MinimizeBox = false;
-            ClientSize = new Size(520, 260);
+
+            // ✅ aumentamos alto para que quepa el horario
+            ClientSize = new Size(560, 520);
             BackColor = Color.FromArgb(30, 30, 36);
 
             // ===== TÍTULO =====
@@ -87,7 +96,7 @@ namespace ConsultorioDentalApp.Forms
             {
                 Left = 180,
                 Top = 110,
-                Width = 300,
+                Width = 340,
                 ForeColor = Color.White,
                 BackColor = Color.FromArgb(40, 40, 48),
                 BorderStyle = BorderStyle.FixedSingle
@@ -109,12 +118,26 @@ namespace ConsultorioDentalApp.Forms
             btnCambiarFoto.Click += BtnCambiarFoto_Click;
             Controls.Add(btnCambiarFoto);
 
-            // ===== BOTÓN GUARDAR =====
+            // ===== CONTENEDOR HORARIO =====
+            var pnlHorario = new Panel
+            {
+                Left = 20,
+                Top = 270,
+                Width = 520,
+                Height = 190,
+                BackColor = Color.FromArgb(45, 48, 58)
+            };
+            Controls.Add(pnlHorario);
+
+            // ✅ construir UI del horario (esto antes no se llamaba)
+            BuildHorarioUI(pnlHorario);
+
+            // ===== BOTONES ABAJO =====
             btnGuardar = new Button
             {
                 Text = "Guardar",
-                Left = 290,
-                Top = 210,
+                Left = 350,
+                Top = 475,
                 Width = 90,
                 FlatStyle = FlatStyle.Flat,
                 ForeColor = Color.White,
@@ -124,12 +147,11 @@ namespace ConsultorioDentalApp.Forms
             btnGuardar.Click += BtnGuardar_Click;
             Controls.Add(btnGuardar);
 
-            // ===== BOTÓN CANCELAR =====
             btnCancelar = new Button
             {
                 Text = "Cancelar",
-                Left = 390,
-                Top = 210,
+                Left = 450,
+                Top = 475,
                 Width = 90,
                 FlatStyle = FlatStyle.Flat,
                 ForeColor = Color.White,
@@ -154,7 +176,6 @@ namespace ConsultorioDentalApp.Forms
                 {
                     try
                     {
-                        // Clonamos la imagen para no dejar bloqueado el archivo
                         using (var imgTemp = Image.FromFile(ofd.FileName))
                         {
                             FotoSeleccionada = new Bitmap(imgTemp);
@@ -182,9 +203,148 @@ namespace ConsultorioDentalApp.Forms
                 return;
             }
 
+            // ✅ validar y guardar horario
+            try
+            {
+                GuardarHorario();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Validación",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                return;
+            }
+
             NombreUsuario = nombre;
             DialogResult = DialogResult.OK;
             Close();
+        }
+
+        // ===================== HORARIO UI =====================
+        private void BuildHorarioUI(Panel contenedor)
+        {
+            agendaCfg = AgendaConfigService.Cargar();
+
+            var lbl = new Label
+            {
+                Text = "Horario laboral",
+                ForeColor = Color.White,
+                AutoSize = true,
+                Top = 12,
+                Left = 12,
+                Font = new Font("Segoe UI", 11f, FontStyle.Bold)
+            };
+
+            clbDias = new CheckedListBox
+            {
+                Left = 12,
+                Top = 42,
+                Width = 180,
+                Height = 130,
+                BackColor = Color.FromArgb(40, 40, 48),
+                ForeColor = Color.White,
+                BorderStyle = BorderStyle.FixedSingle
+            };
+
+            string[] dias = { "Lunes", "Martes", "Miércoles", "Jueves", "Viernes", "Sábado", "Domingo" };
+            for (int i = 0; i < 7; i++)
+            {
+                bool marcado = agendaCfg.DiasLaborales.Contains(i + 1);
+                clbDias.Items.Add(dias[i], marcado);
+            }
+
+            contenedor.Controls.Add(lbl);
+            contenedor.Controls.Add(clbDias);
+
+            // Hora inicio
+            contenedor.Controls.Add(new Label
+            {
+                Text = "Inicio",
+                ForeColor = Color.White,
+                Left = 220,
+                Top = 45,
+                AutoSize = true
+            });
+
+            dtpIni = new DateTimePicker
+            {
+                Left = 220,
+                Top = 65,
+                Width = 140,
+                Format = DateTimePickerFormat.Time,
+                ShowUpDown = true
+            };
+
+            // Hora fin
+            contenedor.Controls.Add(new Label
+            {
+                Text = "Fin",
+                ForeColor = Color.White,
+                Left = 220,
+                Top = 100,
+                AutoSize = true
+            });
+
+            dtpFin = new DateTimePicker
+            {
+                Left = 220,
+                Top = 120,
+                Width = 140,
+                Format = DateTimePickerFormat.Time,
+                ShowUpDown = true
+            };
+
+            dtpIni.Value = DateTime.Today.Add(agendaCfg.HoraInicio);
+            dtpFin.Value = DateTime.Today.Add(agendaCfg.HoraFin);
+
+            contenedor.Controls.Add(dtpIni);
+            contenedor.Controls.Add(dtpFin);
+
+            // Intervalo
+            contenedor.Controls.Add(new Label
+            {
+                Text = "Intervalo (min)",
+                ForeColor = Color.White,
+                Left = 380,
+                Top = 45,
+                AutoSize = true
+            });
+
+            nudIntervalo = new NumericUpDown
+            {
+                Left = 380,
+                Top = 65,
+                Width = 120,
+                Minimum = 5,
+                Maximum = 120,
+                Value = agendaCfg.IntervaloMin,
+                BackColor = Color.FromArgb(40, 40, 48),
+                ForeColor = Color.White
+            };
+
+            contenedor.Controls.Add(nudIntervalo);
+        }
+
+        private void GuardarHorario()
+        {
+            var cfg = new AgendaConfig();
+            cfg.DiasLaborales.Clear();
+
+            for (int i = 0; i < clbDias.Items.Count; i++)
+                if (clbDias.GetItemChecked(i))
+                    cfg.DiasLaborales.Add(i + 1);
+
+            cfg.HoraInicio = dtpIni.Value.TimeOfDay;
+            cfg.HoraFin = dtpFin.Value.TimeOfDay;
+            cfg.IntervaloMin = (int)nudIntervalo.Value;
+
+            if (cfg.DiasLaborales.Count == 0)
+                throw new Exception("Selecciona al menos un día laboral.");
+
+            if (cfg.HoraFin <= cfg.HoraInicio)
+                throw new Exception("La hora fin debe ser mayor que la hora inicio.");
+
+            AgendaConfigService.Guardar(cfg);
         }
     }
 }

@@ -39,13 +39,9 @@ namespace ConsultorioDentalApp.Forms
             Text = "Menú del paciente";
             BackColor = Color.FromArgb(20, 20, 24);
             StartPosition = FormStartPosition.CenterScreen;
-
-            // permitir redimensionar y maximizar
             FormBorderStyle = FormBorderStyle.Sizable;
             MaximizeBox = true;
             MinimizeBox = true;
-
-            // arrancar maximizado
             WindowState = FormWindowState.Maximized;
 
             Font = new Font("Segoe UI", 10f);
@@ -136,9 +132,9 @@ namespace ConsultorioDentalApp.Forms
             pnlContenido.Controls.Add(flpArchivos);
 
 
-            // Botones de acción (puedes ajustar los textos que quieras)
+            // Botones de acción
             flpAcciones.Controls.Add(CrearAccionPaciente("Registro",
-                Properties.Resources.informacion, (s, e) => MostrarEnConstruccion("Registro")));
+    Properties.Resources.informacion, BtnRegistro_Click));
 
             flpAcciones.Controls.Add(CrearAccionPaciente("Consultas",
     Properties.Resources.consultoria, BtnConsultas_Click));
@@ -152,7 +148,8 @@ namespace ConsultorioDentalApp.Forms
 
 
             flpAcciones.Controls.Add(CrearAccionPaciente("Proformas",
-                Properties.Resources.facturas, (s, e) => MostrarEnConstruccion("Proformas")));
+    Properties.Resources.facturas, BtnProformas_Click));
+
 
             flpAcciones.Controls.Add(CrearAccionPaciente("Odonto",
                 Properties.Resources.Fichas, (s, e) => AbrirOdontograma()));
@@ -284,7 +281,6 @@ namespace ConsultorioDentalApp.Forms
         }
 
         // ========== LÓGICA ==========
-
         private void CargarDatosPaciente()
         {
             try
@@ -337,8 +333,6 @@ namespace ConsultorioDentalApp.Forms
                                 {
                                     lblEdad.Text = "Edad: N/D";
                                 }
-
-                                // Registro: fecha actual (si no tienes columna de registro en BD)
                                 lblRegistro.Text = $"Registro: {DateTime.Now:dd/MM/yyyy - HH:mm:ss}";
                             }
                         }
@@ -444,13 +438,9 @@ namespace ConsultorioDentalApp.Forms
 
                 string origen = ofd.FileName;
                 string nombre = Path.GetFileName(origen);
-
-                // Carpeta de archivos del paciente dentro de la app
                 string carpetaBase = Path.Combine(Application.StartupPath, "ArchivosPacientes");
                 string carpetaPaciente = Path.Combine(carpetaBase, _pacienteId.ToString());
                 Directory.CreateDirectory(carpetaPaciente);
-
-                // Evitar sobrescribir: si ya existe, agrega sufijo
                 string destino = Path.Combine(carpetaPaciente, nombre);
                 int contador = 1;
                 while (File.Exists(destino))
@@ -462,11 +452,7 @@ namespace ConsultorioDentalApp.Forms
                 }
 
                 File.Copy(origen, destino);
-
-                // Guardar en BD
                 GuardarArchivoEnBD(nombre, destino);
-
-                // Refrescar lista
                 CargarArchivosPaciente();
             }
         }
@@ -604,7 +590,6 @@ namespace ConsultorioDentalApp.Forms
             }
             else
             {
-                // Ícono simple para PDF u otros (puedes usar un resource específico)
                 preview = new Label
                 {
                     Text = Path.GetExtension(ruta)?.ToUpperInvariant(),
@@ -630,7 +615,6 @@ namespace ConsultorioDentalApp.Forms
             cont.Controls.Add(lblNombre);
             cont.Controls.Add(preview);
 
-            // Click: abrir archivo con la app por defecto
             void Abrir(object s, EventArgs e)
             {
                 try
@@ -657,6 +641,24 @@ namespace ConsultorioDentalApp.Forms
         private void BtnConsultas_Click(object sender, EventArgs e)
         {
             using (var frm = new FrmConsultasPaciente(_pacienteId, _nombrePaciente))
+            {
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog(this);
+            }
+        }
+        private void BtnRegistro_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmPacienteEditar(_pacienteId))
+            {
+                if (frm.ShowDialog(this) == DialogResult.OK)
+                {
+                    CargarDatosPaciente();
+                }
+            }
+        }
+        private void BtnProformas_Click(object sender, EventArgs e)
+        {
+            using (var frm = new FrmProformasPaciente(_pacienteId, _nombrePaciente))
             {
                 frm.StartPosition = FormStartPosition.CenterParent;
                 frm.ShowDialog(this);

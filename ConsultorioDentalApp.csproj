@@ -62,6 +62,10 @@
     <Reference Include="Microsoft.Bcl.AsyncInterfaces, Version=5.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>packages\Microsoft.Bcl.AsyncInterfaces.5.0.0\lib\net461\Microsoft.Bcl.AsyncInterfaces.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <HintPath>packages\Microsoft.Office.Interop.Word.15.0.4797.1004\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
     <Reference Include="MySql.Data, Version=9.5.0.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
       <HintPath>packages\MySql.Data.9.5.0\lib\net48\MySql.Data.dll</HintPath>
     </Reference>
@@ -123,6 +127,18 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Data\DatabaseHelper.cs" />
+    <Compile Include="Forms\FrmAgenda.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgenda.Designer.cs">
+      <DependentUpon>FrmAgenda.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\FrmAgendaCalendar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmAgendaCalendar.Designer.cs">
+      <DependentUpon>FrmAgendaCalendar.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmCieSelector.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -151,6 +167,12 @@
     <Compile Include="Forms\FrmFichaClinica.Designer.cs">
       <DependentUpon>FrmFichaClinica.cs</DependentUpon>
     </Compile>
+    <Compile Include="Forms\FrmItems.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmItems.Designer.cs">
+      <DependentUpon>FrmItems.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmOdontograma.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -163,8 +185,20 @@
     <Compile Include="Forms\FrmPacienteMenu.cs">
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\FrmPacienteRegistro.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPacienteRegistro.Designer.cs">
+      <DependentUpon>FrmPacienteRegistro.cs</DependentUpon>
+    </Compile>
     <Compile Include="Forms\FrmPacientes.cs">
       <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPlantillas.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmPlantillas.Designer.cs">
+      <DependentUpon>FrmPlantillas.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmPrincipal.cs">
       <SubType>Form</SubType>
@@ -173,6 +207,15 @@
       <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </Compile>
     <Compile Include="Forms\FrmProcedimientos.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProformaEditar.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProformasListado.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Forms\FrmProformasPaciente.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Forms\FrmTarjetaTerapéutica.cs">
@@ -198,6 +241,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Repositories\GenericRepository.cs" />
     <Compile Include="Repositories\ProcedimientoRepository.cs" />
+    <Compile Include="Services\AgendaConfigService.cs" />
     <Compile Include="Services\AzureSyncService.cs" />
     <Compile Include="Services\OdontogramaService.cs" />
     <Compile Include="Services\PacienteService.cs" />

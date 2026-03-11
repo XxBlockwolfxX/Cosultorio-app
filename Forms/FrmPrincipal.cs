@@ -1,11 +1,13 @@
 ﻿using System;
-using System.Data;                      // <-- agregado
+using System.Data;                     
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.IO;
 using System.Windows.Forms;
 using ConsultorioDentalApp.Data;
 using MySql.Data.MySqlClient;
+using ConsultorioDentalApp.Forms;  
+
 
 namespace ConsultorioDentalApp.Forms
 {
@@ -131,24 +133,26 @@ namespace ConsultorioDentalApp.Forms
             flpMenu.Controls.Add(CrearItemMenu("Pacientes",
                 Properties.Resources.paciente, (s, e) => SeleccionarPacientes()));
 
-            // AHORA CONSULTAS MUESTRA TABLA GENERAL
             flpMenu.Controls.Add(CrearItemMenu("Consultas",
                 Properties.Resources.consultoria, (s, e) => MostrarConsultasPacientes()));
 
             flpMenu.Controls.Add(CrearItemMenu("Plantillas",
-                Properties.Resources.plantilla, (s, e) => MostrarEnConstruccion("Plantillas")));
+                Properties.Resources.plantilla, (s, e) => MostrarPlantillas()));
 
             flpMenu.Controls.Add(CrearItemMenu("Agenda",
-                Properties.Resources.agenda, (s, e) => MostrarEnConstruccion("Agenda")));
+                Properties.Resources.agenda, MostrarAgenda));
+
+
 
             flpMenu.Controls.Add(CrearItemMenu("Items",
-                Properties.Resources.estante, (s, e) => MostrarEnConstruccion("Items")));
+                Properties.Resources.estante, (s, e) => MostrarItems()));
 
             flpMenu.Controls.Add(CrearItemMenu("Proformas",
-                Properties.Resources.facturas, (s, e) => MostrarEnConstruccion("Proformas")));
+                Properties.Resources.facturas, (s, e) => AbrirListadoProformas()));
 
-            flpMenu.Controls.Add(CrearItemMenu("Fichas",
-                Properties.Resources.Fichas, (s, e) => MostrarEnConstruccion("Fichas")));
+
+            flpMenu.Controls.Add(CrearItemMenu("Formularios",
+                Properties.Resources.Fichas, (s, e) => MostrarEnConstruccion("Formularios")));
 
             flpMenu.Controls.Add(CrearItemMenu("Apps",
                 Properties.Resources.Apps, (s, e) => MostrarEnConstruccion("Apps")));
@@ -356,6 +360,7 @@ namespace ConsultorioDentalApp.Forms
             flpMenu.Visible = false;
             btnNuevoPaciente.Visible = true;
             btnBackPacientes.Visible = true;
+            pnlContenido.Padding = Padding.Empty; 
 
             pnlContenido.Controls.Clear();
 
@@ -370,6 +375,7 @@ namespace ConsultorioDentalApp.Forms
             pnlContenido.Controls.Add(frm);
             frm.Show();
         }
+
 
         // ======================= CONSULTAS (MENÚ PRINCIPAL) =======================
 
@@ -424,9 +430,6 @@ namespace ConsultorioDentalApp.Forms
                 BackColor = Color.Transparent,
                 Margin = new Padding(0, 0, 0, 10)  
             };
-
-
-            // IMPORTANTE: primero se agrega el grid (Fill) y luego el título (Top)
             pnlContenido.Controls.Add(dgv);
             pnlContenido.Controls.Add(lblTitulo);
 
@@ -487,9 +490,6 @@ namespace ConsultorioDentalApp.Forms
             };
         }
 
-
-
-
         private void AjustarColumnasConsultas(DataGridView dgv)
         {
             if (dgv.Columns.Count == 0) return;
@@ -512,8 +512,6 @@ namespace ConsultorioDentalApp.Forms
                 dgv.Columns["Motivo"].HeaderText = "Motivo de consulta";
             if (dgv.Columns["Diagnostico"] != null)
                 dgv.Columns["Diagnostico"].HeaderText = "Diagnóstico";
-
-            // Proporciones de ancho
             if (dgv.Columns["Paciente"] != null)
                 dgv.Columns["Paciente"].FillWeight = 25;
             if (dgv.Columns["Fecha"] != null)
@@ -688,7 +686,7 @@ namespace ConsultorioDentalApp.Forms
             }
             catch
             {
-                // ignorar errores de config
+    
             }
         }
 
@@ -734,5 +732,112 @@ namespace ConsultorioDentalApp.Forms
             {
             }
         }
+        private void MostrarPlantillas()
+        {
+            flpMenu.Visible = true;
+            btnNuevoPaciente.Visible = false;
+            btnBackPacientes.Visible = false;
+
+            pnlContenido.Controls.Clear();
+            pnlContenido.Padding = new Padding(40, 80, 40, 40);
+            pnlContenido.Invalidate();
+
+            var frm = new FrmPlantillas()
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+
+            pnlContenido.Controls.Add(frm);
+            frm.Show();
+        }
+
+        private void MostrarItems()
+        {
+            // Mostrar barra de íconos normal
+            flpMenu.Visible = true;
+            btnNuevoPaciente.Visible = false;
+            btnBackPacientes.Visible = false;
+
+            // Limpiar área central y darle un margen superior
+            pnlContenido.AutoScroll = false;
+            pnlContenido.Controls.Clear();
+
+            //       left, top, right, bottom
+            pnlContenido.Padding = new Padding(40, 80, 40, 40);
+            pnlContenido.Invalidate();
+
+            // Crear el formulario de Items
+            var frm = new Forms.FrmItems
+            {
+                TopLevel = false,
+                FormBorderStyle = FormBorderStyle.None,
+                Dock = DockStyle.Fill
+            };
+
+            // Agregarlo al panel central y mostrarlo
+            pnlContenido.Controls.Add(frm);
+            frm.Show();
+            frm.BringToFront();
+        }
+        private void AbrirListadoProformas()
+        {
+            using (var frm = new FrmProformasListado())
+            {
+                frm.StartPosition = FormStartPosition.CenterParent;
+                frm.ShowDialog(this);
+            }
+        }
+        private void MostrarAgenda(object sender, EventArgs e)
+        {
+            var menu = new ContextMenuStrip();
+
+            menu.Items.Add("Citas", null, (s, ev) =>
+            {
+                pnlContenido.Controls.Clear();
+                pnlContenido.Padding = new Padding(40, 80, 40, 40);
+
+                var f = new FrmAgenda
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    Dock = DockStyle.Fill
+                };
+
+                pnlContenido.Controls.Add(f);
+                f.Show();
+                f.BringToFront();
+            });
+
+            menu.Items.Add("Agenda", null, (s, ev) =>
+            {
+                pnlContenido.Controls.Clear();
+                pnlContenido.Padding = new Padding(40, 110, 40, 40);
+
+                var f = new FrmAgendaCalendar
+                {
+                    TopLevel = false,
+                    FormBorderStyle = FormBorderStyle.None,
+                    Dock = DockStyle.Fill
+                };
+
+                pnlContenido.Controls.Add(f);
+                f.Show();
+                f.BringToFront();
+            });
+
+            // Mostrar debajo del botón / item clickeado
+            var btn = (Control)sender;
+            menu.Show(btn, new Point(0, btn.Height));
+        }
+
+
+
+
+
+
+
+
     }
 }

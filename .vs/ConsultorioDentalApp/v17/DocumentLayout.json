@@ -3,84 +3,20 @@
   "WorkspaceRootPath": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|c:\\users\\ferna\\source\\repos\\cosultorio-app\\forms\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmprincipal.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|c:\\users\\ferna\\source\\repos\\cosultorio-app\\forms\\frmagenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmagenda.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmconsultaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmconsultaedicion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmagendacalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmagendacalendar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmconsultaspaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmconsultaspaciente.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\agendaconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\agendaconfigservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmpacientemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmpacientemenu.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmpacientes.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:properties\\resources.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmpacienteeditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmpacienteeditar.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmpacienteinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmpacienteinfo.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmtarjetaterap\u00E9utica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmfichaclinica.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmprocedimientos.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmprincipal.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmodontograma.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmfichaclinica.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmfichaclinica.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmdashboard.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmdashboard.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmconfiguracion.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\services\\protesisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:services\\protesisservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:models\\protesis.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\forms\\frmconfiguracionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{34BE7FF5-BA6F-4506-B4DA-D0737A8BAAD0}|ConsultorioDentalApp.csproj|solutionrelative:forms\\frmconfiguracionusuario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -90,12 +26,8 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 8,
+          "SelectedChildIndex": 6,
           "Children": [
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
-            },
             {
               "$type": "Bookmark",
               "Name": "ST:128:0:{1fc202d4-d401-403c-9834-5b218574bb67}"
@@ -110,243 +42,52 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "FrmConsultasPaciente.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConsultasPaciente.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmConsultasPaciente.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConsultasPaciente.cs",
-              "RelativeToolTip": "Forms\\FrmConsultasPaciente.cs",
-              "ViewState": "AgIAAKYAAAAAAAAAAAAkwLgAAAAxAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T19:13:30.974Z"
-            },
-            {
-              "$type": "Document",
               "DocumentIndex": 3,
-              "Title": "FrmPacienteMenu.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteMenu.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPacienteMenu.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteMenu.cs",
-              "RelativeToolTip": "Forms\\FrmPacienteMenu.cs",
-              "ViewState": "AgIAAIwCAAAAsskmm2wiwJYCAAANAAAAAAAAAA==",
+              "Title": "FrmConfiguracionUsuario.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracionUsuario.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmConfiguracionUsuario.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracionUsuario.cs",
+              "RelativeToolTip": "Forms\\FrmConfiguracionUsuario.cs",
+              "ViewState": "AgIAAEQBAAAAAAAAAAAqwFABAAA0AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T16:39:12.398Z"
+              "WhenOpened": "2026-01-13T15:29:04.645Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Resources.resx",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Properties\\Resources.resx",
-              "RelativeDocumentMoniker": "Properties\\Resources.resx",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Properties\\Resources.resx",
-              "RelativeToolTip": "Properties\\Resources.resx",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
-              "WhenOpened": "2025-11-29T23:26:08.492Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "FrmPacientes.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacientes.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPacientes.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacientes.cs",
-              "RelativeToolTip": "Forms\\FrmPacientes.cs",
-              "ViewState": "AgIAAFwCAAAAAAAAAAAcwHACAABYAAAAAAAAAA==",
+              "DocumentIndex": 2,
+              "Title": "AgendaConfigService.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\AgendaConfigService.cs",
+              "RelativeDocumentMoniker": "Services\\AgendaConfigService.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\AgendaConfigService.cs",
+              "RelativeToolTip": "Services\\AgendaConfigService.cs",
+              "ViewState": "AgIAADsAAAAAAAAAAAAiwDUAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:22:52.431Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "FrmPrincipal.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPrincipal.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPrincipal.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPrincipal.cs",
-              "RelativeToolTip": "Forms\\FrmPrincipal.cs",
-              "ViewState": "AgIAAOsBAAAAAAAAAAAkwP8BAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:41:24.465Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-01-13T15:27:05.641Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "FrmConsultaEdicion.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConsultaEdicion.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmConsultaEdicion.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConsultaEdicion.cs",
-              "RelativeToolTip": "Forms\\FrmConsultaEdicion.cs",
-              "ViewState": "AgIAALACAAAAAAAAAAAkwLwCAABQAAAAAAAAAA==",
+              "Title": "FrmAgendaCalendar.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmAgendaCalendar.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmAgendaCalendar.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmAgendaCalendar.cs",
+              "RelativeToolTip": "Forms\\FrmAgendaCalendar.cs",
+              "ViewState": "AgIAAPUBAAAAAAAAAAAqwAICAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-06T19:13:52.868Z"
+              "WhenOpened": "2026-01-10T23:44:29.149Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
-              "Title": "FrmPacienteInfo.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteInfo.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPacienteInfo.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteInfo.cs",
-              "RelativeToolTip": "Forms\\FrmPacienteInfo.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAHAAAAAkAAAAAAAAAA==",
+              "DocumentIndex": 0,
+              "Title": "FrmAgenda.cs",
+              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmAgenda.cs",
+              "RelativeDocumentMoniker": "Forms\\FrmAgenda.cs",
+              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmAgenda.cs",
+              "RelativeToolTip": "Forms\\FrmAgenda.cs",
+              "ViewState": "AgIAAPcCAAAAAAAAAAAqwAcDAAAtAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T16:54:05.376Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "FrmProcedimientos.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmProcedimientos.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmProcedimientos.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmProcedimientos.cs",
-              "RelativeToolTip": "Forms\\FrmProcedimientos.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:50.477Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "FrmPacienteEditar.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteEditar.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPacienteEditar.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPacienteEditar.cs",
-              "RelativeToolTip": "Forms\\FrmPacienteEditar.cs",
-              "ViewState": "AgIAAOkAAAAAAAAAAAAUwPsAAAAgAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-12-04T17:02:22.299Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "FrmTarjetaTerap\u00E9utica.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "RelativeToolTip": "Forms\\FrmTarjetaTerap\u00E9utica.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABgAAAAiAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T14:50:29.099Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "FrmFichaClinica.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmFichaClinica.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.cs",
-              "RelativeToolTip": "Forms\\FrmFichaClinica.cs",
-              "ViewState": "AgIAAKIAAAAAAAAAAADgv68AAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-22T16:02:06.165Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "FrmPrincipal.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPrincipal.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmPrincipal.Designer.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmPrincipal.Designer.cs",
-              "RelativeToolTip": "Forms\\FrmPrincipal.Designer.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:50.347Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
-              "Title": "FrmOdontograma.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmOdontograma.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmOdontograma.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmOdontograma.cs",
-              "RelativeToolTip": "Forms\\FrmOdontograma.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:49.848Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
-              "Title": "FrmFichaClinica.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmFichaClinica.Designer.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmFichaClinica.Designer.cs",
-              "RelativeToolTip": "Forms\\FrmFichaClinica.Designer.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:49.738Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 14,
-              "Title": "FrmDashboard.Designer.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.Designer.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmDashboard.Designer.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.Designer.cs",
-              "RelativeToolTip": "Forms\\FrmDashboard.Designer.cs",
-              "ViewState": "AgIAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:49.558Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "FrmDashboard.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmDashboard.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmDashboard.cs",
-              "RelativeToolTip": "Forms\\FrmDashboard.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:49.435Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 16,
-              "Title": "FrmConfiguracion.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracion.cs",
-              "RelativeDocumentMoniker": "Forms\\FrmConfiguracion.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Forms\\FrmConfiguracion.cs",
-              "RelativeToolTip": "Forms\\FrmConfiguracion.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T18:29:49.295Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Program.cs",
-              "RelativeDocumentMoniker": "Program.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Program.cs",
-              "RelativeToolTip": "Program.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA4AAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-29T17:40:41.15Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Protesis.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Protesis.cs",
-              "RelativeDocumentMoniker": "Models\\Protesis.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Models\\Protesis.cs",
-              "RelativeToolTip": "Models\\Protesis.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T15:21:05.345Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "ProtesisService.cs",
-              "DocumentMoniker": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\ProtesisService.cs",
-              "RelativeDocumentMoniker": "Services\\ProtesisService.cs",
-              "ToolTip": "C:\\Users\\ferna\\source\\repos\\Cosultorio-app\\Services\\ProtesisService.cs",
-              "RelativeToolTip": "Services\\ProtesisService.cs",
-              "ViewState": "AgIAAA8AAAAAAAAAAAAEwBsAAAAbAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-11-24T14:47:13.734Z"
+              "WhenOpened": "2026-01-08T15:59:45.994Z",
+              "EditorCaption": ""
             }
           ]
         }

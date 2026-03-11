@@ -128,6 +128,19 @@ namespace ConsultorioDentalApp.Forms
                 Format = DateTimePickerFormat.Short
             };
             pnlFormulario.Controls.Add(dtpFechaNacimiento);
+            // No permitir fechas futuras
+            dtpFechaNacimiento.MaxDate = DateTime.Today;
+
+            // Edad se calcula sola (mejor que el usuario no la escriba)
+            txtEdad.ReadOnly = true;
+            txtEdad.BackColor = Color.Gainsboro;
+
+            // Evento para recalcular edad
+            dtpFechaNacimiento.ValueChanged += (s, e) => ActualizarEdadDesdeNacimiento();
+
+            // calcula una vez al iniciar
+            ActualizarEdadDesdeNacimiento();
+
 
             // ======= ESTADO CIVIL =======
             pnlFormulario.Controls.Add(CrearLabel("Estado Civil:", xLabel, yBase + sepY * 2));
@@ -518,7 +531,9 @@ namespace ConsultorioDentalApp.Forms
     VALUES (@Nombre, @Edad, @Sexo, @FechaNacimiento, @EstadoCivil, @Correo, @TelefonoMovil, @Whatsapp, @Direccion, @Ciudad);", conn);
 
                     cmd.Parameters.AddWithValue("@Nombre", txtNombre.Text);
-                    cmd.Parameters.AddWithValue("@Edad", txtEdad.Text);
+                    int edad = CalcularEdad(dtpFechaNacimiento.Value.Date);
+                    cmd.Parameters.AddWithValue("@Edad", edad);
+
                     cmd.Parameters.AddWithValue("@Sexo", cmbSexo.SelectedItem?.ToString() ?? "");
                     cmd.Parameters.AddWithValue("@FechaNacimiento", dtpFechaNacimiento.Value.Date);
                     cmd.Parameters.AddWithValue("@EstadoCivil", cmbEstadoCivil.SelectedItem?.ToString() ?? "");
@@ -556,6 +571,8 @@ namespace ConsultorioDentalApp.Forms
             if (cmbSexo != null) cmbSexo.SelectedIndex = -1;
             if (cmbEstadoCivil != null) cmbEstadoCivil.SelectedIndex = -1;
             if (dtpFechaNacimiento != null) dtpFechaNacimiento.Value = DateTime.Today;
+            ActualizarEdadDesdeNacimiento();
+
         }
 
         // ===================== CARGAR PACIENTES =====================
@@ -909,6 +926,20 @@ namespace ConsultorioDentalApp.Forms
             return bmp;
         }
 
+        private void ActualizarEdadDesdeNacimiento()
+        {
+            int edad = CalcularEdad(dtpFechaNacimiento.Value.Date);
+            txtEdad.Text = edad.ToString();
+        }
+
+        private int CalcularEdad(DateTime fechaNac)
+        {
+            var hoy = DateTime.Today;
+            int edad = hoy.Year - fechaNac.Year;
+            if (fechaNac > hoy.AddYears(-edad)) edad--;
+            if (edad < 0) edad = 0;
+            return edad;
+        }
 
 
 
